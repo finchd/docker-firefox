@@ -44,3 +44,11 @@ and use Xpra on the host to attach to container's GUI
 
 (replace ``PORT`` with the port number exposed from the container)
 
+If you would like to have a persistent profile used in the container, you can
+mount a host directory into ``/profile`` inside the container by adding
+a ``-v`` option to docker run, for example:
+
+    docker run -d -v /home/user/firefox_profile:/profile beli/firefox
+
+Simultaneously running multiple containers from the same profile directory is
+not recommended, Firefox will not like it.
