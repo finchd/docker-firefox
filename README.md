@@ -10,6 +10,9 @@ Locations
 Source of the image is hosted on Bitbucket at
 https://bitbucket.org/beli-sk/docker-firefox
 
+If you find any problems, please post an issue at
+https://bitbucket.org/beli-sk/docker-firefox/issues
+
 The built image is located on Docker Hub at
 https://hub.docker.com/r/beli/firefox/
 
@@ -52,3 +55,9 @@ a ``-v`` option to docker run, for example:
 
 Simultaneously running multiple containers from the same profile directory is
 not recommended, Firefox will not like it.
+
+Similarly, you can do the same for ``/downloads`` directory inside the
+container.
+
+Both volumes should have read/write permissions for user ID 1000, under which
+is used for starting firefox in the container.
