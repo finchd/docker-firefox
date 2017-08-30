@@ -1,4 +1,4 @@
-FROM ubuntu:15.04
+FROM ubuntu:16.04
 MAINTAINER Michal Belica <devel@beli.sk>
 RUN apt-get update && apt-get install -y firefox xpra && apt-get clean
 RUN sed -ie 's/^start-child/#start-child/' /etc/xpra/xpra.conf
