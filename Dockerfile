@@ -1,5 +1,5 @@
-FROM ubuntu:16.04
-MAINTAINER Michal Belica <devel@beli.sk>
+FROM ubuntu:18.04
+MAINTAINER Donovan Finch <me@dfin.ch>
 RUN apt-get update && apt-get install -y firefox xpra && apt-get clean
 RUN sed -ie 's/^start-child/#start-child/' /etc/xpra/xpra.conf
 RUN useradd -d /home/user -m user
